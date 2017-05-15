@@ -1,0 +1,34 @@
+<div style="text-align: right;">
+	<form class="form-search" action="#">
+		<input type="text" name="search_LIKE_name"
+				class="input_search input-medium" data-bind="value:searchText" />&nbsp;&nbsp;
+		<button type="submit" class="btn" id="search_btn"
+				data-bind="click: searchPage">搜索</button>
+	</form>
+</div>
+<!-- 列表区域  -->
+<div id ="refcontent">
+<table  class="table table-bordered table-hover">
+	<thead>
+		<tr>
+			<th width="15%">登录名</th>
+			
+		</tr>
+	</thead>
+	<tbody  data-bind="foreach: data.content">
+		<tr>
+		
+			<td data-bind="text:loginName"></td>
+			<input type="text" name="name"
+				class="input_search input-medium"  />
+			
+		</tr>
+	</tbody>
+
+</table>
+<!-- 分页区域  -->
+<div style="text-align: center">
+	<ul class="pagination" id="pagination" style="margin: 0px">
+	</ul>
+</div>
+</div>

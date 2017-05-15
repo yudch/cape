@@ -1,0 +1,34 @@
+{
+	"dataTables": {
+		"dataTable1": {
+			"select": null,
+			"current": 0,
+			"pageSize": 20,
+			"pageIndex": 0,
+			"totalPages": 0,
+			"rows": [
+				{
+					"id": "r40077",
+					"status": "new",
+					"data": {
+						"billnumber": "002",
+						"datatime": "2015-5-15",
+						"company": "用友网络科技股份有限公司",
+						"department": "UAPweb",
+						"person": "lixiao",
+						"money": "60",
+						"email": "li@yonyou.com",
+						"phone": "18811437255",
+						"landline": "62434235",
+						"beardeparment": "UAP",
+						"project": "默认项目"
+					}
+				}
+			],
+			"meta": null
+		}
+	},
+	"comps": "",
+	"contentType": "",
+	"custom": ""
+}

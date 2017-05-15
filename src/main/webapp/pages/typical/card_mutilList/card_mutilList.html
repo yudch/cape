@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="../../common/libs/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" href="../../common/libs/uui/css/u.css" />
+		<link rel="stylesheet" href="temp.css" />
+
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-success">
+						<div class="panel-heading" style="position: relative;">
+							<h3 class="panel-title">报销申请</h3>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="grid simple">
+										<div class="grid-title no-border">
+											<h4 class="label-left-em">基本信息</h4>
+										</div>
+										<div class="grid-body no-border">
+											<div class="form-inline">
+
+												<fieldset class="form-group form-group-sm billitem">
+													<div class="input-group date form_date">
+														<input class="form-control ac_input" type="text" u-meta='{"data":"dataTable1","id":"bill","field":"billnumber", "type":"string"}'>
+														<span class="input-group-addon"></span>
+													</div>
+													<label class="billitem-label">单据编号</label>
+												</fieldset>
+												<fieldset class="form-group form-group-sm billitem">
+													<div class="input-group date form_date">
+														<input class="form-control ac_input" type="text" u-meta='{"data":"dataTable1","field":"datatime", "type":"string"}' data-provide="datetimepicker" data-options="{&quot;format&quot;:&quot;YYYY-MM-DD&quot;}">
+														<span class="input-group-addon">
+															<span class="fa fa-calendar"></span>
+														</span>
+													</div>
+													<label class="billitem-label">单据日期</label>
+												</fieldset>
+												<fieldset class="form-group form-group-sm billitem">
+													<div class="input-group date form_date">
+														<input class="form-control ac_input" type="text" u-meta='{"data":"dataTable1","field":"company", "type":"string"}'>
+														<span class="input-group-addon"></span>
+													</div>
+													<label class="billitem-label">公司</label>
+												</fieldset>
+												<fieldset class="form-group form-group-sm billitem">
+													<div class="input-group date form_date">
+														<input class="form-control ac_input" type="text" u-meta='{"data":"dataTable1","field":"department", "type":"string"}'>
+														<span class="input-group-addon"></span>
+													</div>
+													<label class="billitem-label">部门</label>
+												</fieldset>
+												<br />
+												<fieldset class="form-group form-group-sm billitem">
+													<div class="input-group date form_date">
+														<input class="form-control ac_input" type="text" u-meta='{"data":"dataTable1","field":"person", "type":"string"}'>
+														<span class="input-group-addon"></span>
+													</div>
+													<label class="billitem-label">报销人</label>
+												</fieldset>
+												<fieldset class="form-group form-group-sm billitem">
+													<div class="input-group date form_date">
+														<input class="form-control ac_input" type="text" u-meta='{"data":"dataTable1","field":"money", "type":"string"}'>
+														<span class="input-group-addon"></span>
+													</div>
+													<label class="billitem-label">报销金额</label>
+												</fieldset>
+												<fieldset class="form-group form-group-sm billitem">
+													<div class="input-group date form_date">
+														<input class="form-control ac_input" type="text" u-meta='{"data":"dataTable1","field":"email", "type":"string"}'>
+														<span class="input-group-addon"></span>
+													</div>
+													<label class="billitem-label">邮件</label>
+												</fieldset>
+												<br />
+												<fieldset class="form-group form-group-sm billitem">
+													<div class="input-group date form_date">
+														<input class="form-control ac_input" type="text" u-meta='{"data":"dataTable1","field":"phone", "type":"string"}'>
+														<span class="input-group-addon"></span>
+													</div>
+													<label class="billitem-label">手机</label>
+												</fieldset>
+
+												<fieldset class="form-group form-group-sm billitem">
+													<div class="input-group date form_date">
+														<input class="form-control ac_input" type="text" u-meta='{"data":"dataTable1","field":"landline", "type":"string"}'>
+														<span class="input-group-addon"></span>
+													</div>
+													<label class="billitem-label">办公电话</label>
+												</fieldset>
+												<br />
+												<fieldset class="form-group form-group-sm billitem">
+													<div class="input-group date form_date">
+														<input class="form-control ac_input" type="text" u-meta='{"data":"dataTable1","field":"beardeparment", "type":"string"}'>
+														<span class="input-group-addon"></span>
+													</div>
+													<label class="billitem-label">费用承担部门</label>
+												</fieldset>
+
+												<fieldset class="form-group form-group-sm billitem">
+													<div class="input-group date form_date">
+														<input class="form-control ac_input" type="text" u-meta='{"data":"dataTable1","field":"project", "type":"string"}'>
+														<span class="input-group-addon"></span>
+													</div>
+													<label class="billitem-label">项目</label>
+												</fieldset>
+
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="grid simple">
+										<div class="grid-title no-border">
+											<h4 class="label-left-em">详情</h4>
+										</div>
+										<div class="grid-body no-border">
+											<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+												<ul id="myTab" class="nav nav-tabs" role="tablist" style="position: relative;">
+													<li role="presentation" class="active"><a data-bind="click:clickAction" href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="false">交通费用</a>
+													</li>
+													<li role="presentation" class=""><a data-bind="click:clickAction" href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="true">冲销明细</a>
+													</li>									
+												</ul>
+												<div id="myTabContent" class="tab-content">
+													<div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
+														<div type="text" u-meta='{"id":"grid1","data":"dataTable2","type":"grid","editable":true}'>
+															<div options='{"field":"address","dataType":"String","title":"出发地点","editType":"string"}'></div>
+															<div options='{"field":"datatime","dataType":"DateTime","title":"日期","editType":"datetime"}'></div>
+															<div options='{"field":"arriveAddress","dataType":"String","title":"到达地点","editType":"string"}'></div>
+															<div options='{"field":"costType","dataType":"String","title":"费用类型","editType":"string"}'></div>
+															<div options='{"field":"reason","dataType":"String","title":"事由","editType":"string"}'></div>
+															<div options='{"field":"money","dataType":"Int","title":"报销金额","editType":"number"}'></div>
+														</div>
+													</div>
+													<div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+														<div type="text" u-meta='{"id":"grid2","data":"dataTable3","type":"grid","editable":true}'>
+															<div options='{"field":"loanBill","dataType":"String","title":"借款单号","editType":"string"}'></div>
+															<div options='{"field":"loanPerson","dataType":"String","title":"借款人","editType":"string"}'></div>
+															<div options='{"field":"loanDepartment","dataType":"String","title":"借款部门","editType":"string"}'></div>
+															<div options='{"field":"offMoney","dataType":"String","title":"冲销金额","editType":"string"}'></div>
+															<div options='{"field":"costMoney","dataType":"String","title":"费用金额","editType":"string"}'></div>
+															<div options='{"field":"offTime","dataType":"DateTime","title":"冲销日期","editType":"datetime"}'></div>
+															<div options='{"field":"effectTime","dataType":"DateTime","title":"生效日期","editType":"datetime"}'></div>
+															<div options='{"field":"project","dataType":"String","title":"项目","editType":"string"}'></div>
+														</div>
+													</div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../common/libs/jquery/jquery-1.11.2.js"></script>
+		<script type="text/javascript" src="../../common/libs/knockout/knockout-3.2.0.debug.js"></script>
+		<script type="text/javascript" src="../../common/libs/bootstrap/js/bootstrap.js"></script>
+		<script type="text/javascript" src="../../common/libs/uui/js/u.js"></script>
+		<script type="text/javascript" src="../../common/libs/uui/js/u.biz.js"></script>
+		<script type="text/javascript" src="card_mutilList.js"></script>
+
+	</body>
+
+</html>

@@ -1,0 +1,51 @@
+<div class="container-fixed">
+	<div class="row" style="margin-bottom: 10px;">
+		<div class="ec-menu col-xs-8 col-md-8">
+			<div style="text-align: left;">
+				<button type="button" class="btn btn-primary btn-lg active" data-bind="click:add">&nbsp;&nbsp;新增&nbsp;&nbsp;</button>
+			    <button type="button" class="btn btn-primary btn-lg active" data-bind="click:delBatch">&nbsp;&nbsp;删除&nbsp;&nbsp;</button>
+			</div>
+		</div>
+		<div class="ec-search col-xs-4 col-md-4">
+			<div style="text-align: right;">
+				<form class="form-search" action="#">
+					<input type="text" name="search_LIKE_name" class="input_search input-medium"
+						data-bind="value:searchText" />&nbsp;&nbsp;
+					<button type="submit" class="btn" id="search_btn"
+						data-bind="click: searchPage">搜索</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- 列表区域  -->
+	<div class="table-responsive">
+		<table id="contentTable"
+			class="table table-bordered table-condensed table-hover">
+			<thead>
+				<tr>
+				    <th > <input type="checkbox" id="markedAll"  name="markedAll" data-bind="click:selectAll()"  />  </th>
+					<th width="30%">id</th>
+					<th width="15%">名称</th>
+					<th width="10%">编码</th>
+					<th width="30%">备注</th>
+					<th width="15%" align="center" style="text-align:center">操作</th>
+				</tr>
+			</thead>
+			<tbody data-bind="foreach: data.content">
+				<tr>
+				    <td> <input type="checkbox" name="marked" data-bind="value:id" onclick="viewModel.selectSingle()"  /> </td>
+					<td data-bind="text:id"></td>
+					<td><strong><a href="#" data-bind="text:name,attr: {href: '#/example/demo/demoinfo/' + id }"></a></strong></td>
+					<td data-bind="text:code"></td>
+					<td data-bind="text:memo"></td>
+					<td align="center"><strong><a href="#" data-bind="click: $parent.del">删除</a></strong></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- 分页区域  -->
+	<div style="text-align: center">
+		<ul class="pagination" id="pagination" style="margin: 0px">
+		</ul>
+	</div>
+</div>

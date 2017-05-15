@@ -1,0 +1,71 @@
+<meta http-equiv="pragma" content="no-cache"> 
+<meta http-equiv="expires" content="wed, 26 feb 1997 08:21:57 gmt"> 
+<meta http-equiv="expires" content="0"> 
+<div class="row">
+	<div class="col-xs-12">
+		<div class="box">
+			<div class="box-header">
+				<div class="ec-menu col-xs-8 col-md-8">
+				<div style="text-align: left;">
+					<button type="button" class="btn btn-primary btn-lg active"
+						data-bind="click:add">&nbsp;&nbsp;新增用户&nbsp;&nbsp;</button>
+<!-- 					<button type="button" class="btn btn-primary btn-lg active" -->
+<!-- 						data-bind="click:approver">&nbsp;&nbsp;审核&nbsp;&nbsp;</button> -->
+				</div>
+			</div>
+			
+				<div style="text-align: right;">
+					<form class="form-search" action="#">
+						<input type="text" name="search_LIKE_name"
+							class="input_search input-medium" data-bind="value:searchText" />&nbsp;&nbsp;
+						<button type="submit" class="btn btn-primary" id="search_btn"
+							data-bind="click: searchPage">搜索</button>
+						<div class="input-group input-group-sm"></div>
+					</form>
+				</div>
+
+			</div>
+			<!-- /.box-header -->
+			<div class="box-body">
+				<table id="example2" class="table table-bordered table-hover">
+					<thead>
+						<tr>
+							<th width="10%">序号</th>
+							<th width="15%">登录名</th>
+							<th width="15%">用户名</th>
+							<th width="10%">角色</th>
+							<th width="20%">注册时间</th>
+							<th width="15%" align="center" style="text-align: center">操作</th>
+						</tr>
+					</thead>
+					<tbody data-bind="foreach: data.content">
+						<tr>
+							<td data-bind="text: ($index() + 1)"> </td>
+							<td data-bind="text:loginName"></td>
+							<td><strong><a href="#"
+									data-bind="text:name,attr: {href: '#/mgr/account/accountinfo/' + id }"></a></strong></td>
+							<td data-bind="text:roles"></td>
+							<td data-bind="text:registerDate"></td>
+							<td align="center"><strong> <a href="#"
+									data-bind="click: $parent.del">删除</a>
+							</strong></td>
+						</tr>
+					</tbody>
+
+				</table>
+					<!-- 分页区域  -->
+				<div style="text-align: center">
+					<ul class="pagination" id="pagination" style="margin: 0px">
+					</ul>
+				</div>
+			</div>
+			<!-- /.box-body -->
+		</div>
+		<!-- /.box -->
+	</div>
+	<!-- /.col -->
+</div>
+<!-- /.row -->
+
+		
+		
